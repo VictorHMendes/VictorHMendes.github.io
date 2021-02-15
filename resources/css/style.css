@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+	font-family: Josefin Slab;
+	src: url(/vendors/fonts/JosefinSlab-Light.ttf);
+	font-family: Abril Fatface;
+	src: url(/vendors/fonts/AbrilFatface-Regular.otf);
+}
+
+html {
+    font-size: 22px;
+    font-weight: 300;
+    color: white;
+    text-rendering: optimizeLegibility;
+}
+
+/* BACKGROUND IMAGES*/
+
+.background_image_main {
+    background: url(/resources/css/background_images/bench60.jpg) no-repeat center center fixed;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    
+}
+.background_image_pages {
+    background: url(/resources/css/background_images/track1.jpg) no-repeat center center fixed;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+
+/*MAIN NAVIGATION*/
+
+.main_nav {
+    padding: 30px;
+    text-align: center;
+    list-style: none;
+    
+    
+}
+
+.main_nav li {
+    display: inline-block;
+    margin-right: 50px;
+    font-family: Josefin Slab;
+    font-size: 35px;
+    letter-spacing: 2px;
+    line-height: 1.5em;
+    text-shadow: 0px 0px 5px black;
+
+}
+
+.main_nav li a {
+    color: darkgrey;
+    text-decoration: none;
+    
+}
+
+.main_nav li a:hover {
+    color: white;
+    transition: color 1s;
+}
+
+.main_nav li a.active_link {
+    color: white;
+}
+
+/*HOME TITLE DISPLAY AND TAGLINE*/
+
+.site_title {
+    font-family: Abril Fatface;
+    padding-top: 800px;
+    padding-bottom: 750px;
+	color: white;
+	text-align: center;
+	font-size: 45px;
+    text-shadow: 0px 0px 10px black;
+    
+}
+
+.site_tagline {
+    font-family: Josefin Slab;
+    text-shadow: 0px 0px 5px black;
+    color: darkgrey;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 2.5px;
+    line-height: 1.5em;
+}
+
+/* PAGES TITLE*/
+
+.pages_title {
+    padding-top: 40px;
+    font-family: Abril Fatface;
+    text-align: center;
+    
+}
+
+.pages_title a {
+    text-decoration: none;
+    color: darkgrey;
+    font-size: 61px;
+    text-shadow: 0px 0px 10px black;
+}
+
+.pages_title a:hover {
+    color: white;
+    transition: color 2s;
+}
+
+/*GALLERY FORMAT*/
+
+#gallery_tag {
+    text-align: center;
+}
+
+.gallery {
+    padding: 0px 150px;
+    padding-top: 115px;
+    padding-bottom: 250px;
+}
+
+.gallery_portraits {
+    padding-top: 115px;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 900px;
+}
+
+.gallery_bodyscapes {
+    padding-top: 115px;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 984px;
+}
+
+.gallery_row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+/* Landscape page */
+.gallery_column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.gallery_column img {
+    margin-top: 5px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+/* Portraits page */
+
+.gallery_column_portraits {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.gallery_column_portraits img {
+    margin-top: 5px;
+    vertical-align: middle;
+    width: 100%;
+}
+/* Bodyscapes page */
+
+.gallery_column_bodyscapes {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.gallery_column_bodyscapes img {
+    margin-top: 5px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+
+/*CANTACT IMAGE*/
+
+.contact_img{
+    padding: 50px;
+    text-align: center;
+}
+
+/*CANTACT FORM*/
+
+.about_text {
+	font-family: Josefin Slab;
+	padding: 50px 200px;
+	font-size: 20px;
+	color: white;
+}
+
+form {
+	font-family: JosefinSlab;
+	width: 100%;
+	padding: 80px 200px;
+	font-size: 16px;
+	font-weight: 600;
+	color: white;
+	text-align: center;
+	
+	
+}
+
+.form_group {
+	padding-top: 20px;
+	padding-bottom: 20px;
+    
+
+}
+
+.form_group label {
+	font-family: Josefin Slab;
+	font-size: 25px;
+    padding-right: 650px;
+
+}
+
+.form_group input {
+	border-radius: 5px;
+	border: none;
+	width: 50%;
+	height: 40px;
+}
+
+.form_group_message label {
+    font-family: Josefin Slab;
+    font-size: 25px;
+    padding-right: 633px;
+}
+
+.form_group_message textarea {
+    width: 50%;
+	border-radius: 5px;
+}
+
+.form_group_submit input {
+	color: white;
+	background-color: transparent;
+	border: 2px solid white;
+	border-radius: 5px;
+	width: 8%;
+	height: 40px;
+	font-family: Josefin Slab;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+    letter-spacing: 3px;
+}
+
+.form_group_submit:hover {
+    
+}
+
+
+/*FOOTER COPYRYGHT*/
+
+#copyright {
+    color: white;
+    text-align: center;
+    font-family: Josefin Slab;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+}
+
+/*HOME PAGE FOOTER*/
+
+.footer_main {
+    text-align: center;
+}
+
+.social_icon {
+    padding: 20px;
+    
+}
