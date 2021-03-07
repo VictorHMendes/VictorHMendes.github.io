@@ -3,6 +3,7 @@
     .view {
         width: 400px;
 	background-size: cover;
+	background-attachment: fixed;
     }
 }
 
@@ -12,6 +13,7 @@
     .view {
         width: 600px;
 	background-size: cover;
+	background-attachment: fixed;
     }
 }
 
