@@ -4,6 +4,7 @@
         width: 400px;
 	background-size: cover;
 	background-attachment: fixed;
+	font-size: 10px;
     }
 }
 
@@ -14,6 +15,7 @@
         width: 600px;
 	background-size: cover;
 	background-attachment: fixed;
+	font-size: 10px;
     }
 }
 
