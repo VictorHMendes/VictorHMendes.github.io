@@ -42,14 +42,14 @@ html {
 /* BACKGROUND IMAGES*/
 
 .background_image_main {
-    background: url(/resources/css/background_images/bench60.jpg) no-repeat center center fixed;
+    background: url(/resources/css/background_images/bench60Small.jpg) no-repeat center center fixed;
     background-size: cover;
     background-attachment: fixed;
     
     
 }
 .background_image_pages {
-    background: url(/resources/css/background_images/track1.jpg) no-repeat center center fixed;
+    background: url(/resources/css/background_images/track1Small.jpg) no-repeat center center fixed;
     background-size: cover;
     background-attachment: fixed;
 }
