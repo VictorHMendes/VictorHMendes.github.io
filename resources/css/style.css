@@ -248,7 +248,7 @@ form {
 .form_group label {
 	font-family: Josefin Slab;
 	font-size: 25px;
-    	padding-right: 700px;
+    	padding-right: 500px;
 
 }
 
@@ -262,7 +262,7 @@ form {
 .form_group_message label {
     	font-family: Josefin Slab;
     	font-size: 25px;
-    	padding-right: 633px;
+    	padding-right: 500px;
 }
 
 .form_group_message textarea {
