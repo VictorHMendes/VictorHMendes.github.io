@@ -229,13 +229,13 @@ html {
 form {
 	font-family: JosefinSlab;
 	width: 100%;
+	padding-bottom: 80px;
 	font-size: 16px;
 	font-weight: 600;
 	color: white;
 	text-align: center;
-	
-	
 }
+
 
 .form_group {
 	padding-bottom: 20px;
@@ -246,26 +246,31 @@ form {
 .form_group label {
 	font-family: Josefin Slab;
 	font-size: 25px;
+
 }
 
 .form_group input {
 	border-radius: 5px;
 	border: none;
-	width: 50%;
+	width: 40%;
 	height: 40px;
+    
 }
 
 .form_group_message label {
     	font-family: Josefin Slab;
     	font-size: 25px;
+    
 }
 
 .form_group_message textarea {
-    	width: 50%;
+    	width: 40%;
 	border-radius: 5px;
+    
 }
 
 .form_group_submit input {
+    text-align: center;
 	color: white;
 	background-color: transparent;
 	border: 2px solid white;
@@ -275,8 +280,7 @@ form {
 	font-family: Josefin Slab;
 	font-size: 16px;
 	font-weight: bold;
-	text-align: center;
-    	letter-spacing: 3px;
+    	letter-spacing: 3px; 
 }
 
 .form_group_submit:hover {
