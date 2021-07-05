@@ -229,7 +229,6 @@ html {
 form {
 	font-family: JosefinSlab;
 	width: 100%;
-	padding: 80px 200px;
 	font-size: 16px;
 	font-weight: 600;
 	color: white;
@@ -239,7 +238,6 @@ form {
 }
 
 .form_group {
-	padding-top: 20px;
 	padding-bottom: 20px;
     
 
@@ -248,8 +246,6 @@ form {
 .form_group label {
 	font-family: Josefin Slab;
 	font-size: 25px;
-    	padding-right: 480px;
-
 }
 
 .form_group input {
@@ -262,7 +258,6 @@ form {
 .form_group_message label {
     	font-family: Josefin Slab;
     	font-size: 25px;
-    	padding-right: 500px;
 }
 
 .form_group_message textarea {
