@@ -213,7 +213,8 @@ html {
 /*CANTACT IMAGE*/
 
 .contact_img{
-    	padding: 50px;
+    	max-width: 100%;
+	height: auto;
     	text-align: center;
 }
 
