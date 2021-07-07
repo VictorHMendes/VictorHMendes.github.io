@@ -58,30 +58,29 @@
             </div>
         </section>
         <section>
-            <form method="post" action="email.php" id="form">
-                <h2>Contact us:</h2>
-                
-                <div class="form_group">
-                    <label for="name">Name *</br></label>
-                    <input type="text" id="name" required>
-                </div>
-                <div class="form_group">
-                    <label for="name">Email *</br></label>
-                    <input type="email" id="name" required>
-                </div>
-                <div class="form_group">
-                    <label for="name">Subject *</br></label>
-                    <input type="text" id="name" required>
-                </div>
-                <div class="form_group_message">
-                    <label for="name">Message *</br></label>
-                    <textarea rows="10" cols="106"></textarea>
-                </div>
-                </br>
-                <div class="form_group_submit">
-                    <input type="submit" value="SUBMIT">
-                </div>
-            </form>
+            <article id="contact">
+                <h2 class="major">Contact</h2>
+                <form method="post" action="#">
+                    <div class="fields">
+                        <div class="field half">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" />
+                        </div>
+                        <div class="field half">
+                            <label for="email">Email</label>
+                            <input type="text" name="email" id="email" />
+                        </div>
+                        <div class="field">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" rows="4"></textarea>
+                        </div>
+                    </div>
+                    <ul class="actions">
+                        <li><input type="submit" value="Send Message" class="primary" /></li>
+                        <li><input type="reset" value="Reset" /></li>
+                    </ul>
+                </form>
+            </article>
         </section>
         <section>
             <div>
