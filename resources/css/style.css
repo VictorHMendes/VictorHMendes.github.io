@@ -1,0 +1,401 @@
+html {
+    height: 100%; /* Keep this for legacy browser compatibility */
+}
+
+body {
+    min-height: 100vh; /* This is the key change */
+/* ADD THESE TWO LINES to make the body a flex container */
+    display: flex;
+    flex-direction: column;
+}
+/*----------------------------------------------*/
+/* SETUP & GENERAL STYLES                       */
+/*----------------------------------------------*/
+:root {
+    --primary-text-color: white;
+    --secondary-text-color: darkgrey;
+    --shadow-color: black;
+    --title-font: 'Abril Fatface', serif;
+    --body-font: 'Josefin Slab', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+	font-family: 'Josefin Slab';
+	src: url(/vendors/fonts/JosefinSlab-Light.ttf);
+}
+
+@font-face {
+	font-family: 'Abril Fatface';
+	src: url(/vendors/fonts/AbrilFatface-Regular.otf);
+}
+
+html {
+    font-size: 22px;
+    font-weight: 300;
+    color: var(--primary-text-color);
+    text-rendering: optimizeLegibility;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*----------------------------------------------*/
+/* BACKGROUNDS                                  */
+/*----------------------------------------------*/
+body.background_image_main,
+body.background_image_pages {
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+body.background_image_main {
+    background-image: url(/resources/css/background_images/bench60Small.jpg);
+}
+body.background_image_pages {
+    background-image: url(/resources/css/background_images/track1Small.jpg);
+}
+
+/*----------------------------------------------*/
+/* HEADER & NAVIGATION                          */
+/*----------------------------------------------*/
+.main_nav {
+    padding: 30px;
+    text-align: center;
+    list-style: none;
+}
+.main_nav li {
+    display: inline-block;
+    margin: 0 25px;
+    font-family: var(--body-font);
+    font-size: 35px;
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 5px var(--shadow-color);
+    font-weight: bold;
+}
+.main_nav li a {
+    color: var(--secondary-text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.main_nav li a:hover,
+.main_nav li a.active_link {
+    color: var(--primary-text-color);
+}
+.mobile-nav-icon {
+    display: none;
+}
+
+/*----------------------------------------------*/
+/* PAGE CONTENT                                 */
+/*----------------------------------------------*/
+.section-home-title {
+    /* The layout rules are now handled by the 'main' element, so this can be simplified. */
+    width: 100%; /* Ensure it takes full width */
+}
+/* This targets the body of the index page ONLY */
+body.background_image_main {
+    display: flex;
+    flex-direction: column;
+}
+
+/* This targets the main element of the index page ONLY */
+body.background_image_main main {
+    /* flex-grow is now handled by the general 'main' rule below */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main {
+    flex-grow: 1;
+}
+
+/*----------------------------------------------*/
+/* SIGNATURE & PAGE TITLES                      */
+/*----------------------------------------------*/
+.site_title,
+.pages_title {
+    text-align: center; /* Keeps the contents centered */
+}
+
+.pages_title {
+    padding-top: 40px; /* Restores spacing for the gallery pages */
+}
+
+/* The main signature image style */
+.site-signature {
+    max-width: 550px; /* Controls the maximum size of your signature. Adjust as needed. */
+    width: 100%;      /* Ensures it shrinks on smaller screens */
+    height: auto;     /* Maintains aspect ratio */
+}
+
+/* New hover effect for the clickable signature on gallery pages */
+.pages_title a .site-signature {
+    transition: opacity 0.3s ease; /* Smooth fade effect on hover */
+}
+
+.pages_title a:hover .site-signature {
+    opacity: 0.8; /* Makes the signature slightly transparent on hover */
+}
+.site_tagline {
+    font-family: var(--body-font);
+    text-shadow: 0px 0px 5px var(--shadow-color);
+	color: var(--secondary-text-color);
+    font-size: 30px;
+    letter-spacing: 2.5px;
+}
+
+
+/*----------------------------------------------*/
+/* GALLERY                                      */
+/*----------------------------------------------*/
+.gallery-section {
+    padding: 80px 10%; /* Use percentages for flexible padding */
+    padding-bottom: 150px;
+}
+#gallery_tag {
+    text-align: center;
+    margin-bottom: 25px;
+    font-family: var(--body-font);
+    font-size: 0.9em;
+}
+.gallery_row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -4px; /* Counteract padding on columns */
+    justify-content: center;
+}
+.gallery_column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+.gallery_column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    /*Makes the hover effect smooth. 0.3s is a good speed. */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+    /* ADD THIS ENTIRE NEW BLOCK: This creates the "pop out" effect on hover. */
+.gallery_column a:hover img {
+    /* Makes the image 5% bigger. You can change this value. */
+    transform: scale(1.05); 
+    /* Adds a subtle shadow to make it look like it's lifting off the page. */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5); 
+    /* Ensures the popping image appears on top of its neighbors. */
+    z-index: 10; 
+    /* We need to set the position for z-index to work. */
+    position: relative; 
+}
+
+/*----------------------------------------------*/
+/* CONTACT PAGE                                 */
+/*----------------------------------------------*/
+.section-contact {
+    padding: 60px 5%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.contact_img {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.about_text {
+	font-family: var(--body-font);
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 50px;
+}
+.about_text p {
+    margin-bottom: 1.2em;
+}
+.contact-form-container .major {
+    font-size: 26px;
+    color: var(--primary-text-color);
+    text-decoration: underline;
+    margin-bottom: 30px;
+    font-family: var(--title-font);
+}
+form .fields {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1rem 2rem -1rem;
+}
+form .fields .field {
+    padding: 0 1rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+form .fields .field.half {
+    width: 50%;
+}
+label {
+    font-family: var(--body-font);
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    margin: 0 0 0.8rem 0;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    -webkit-appearance: none;
+    appearance: none;
+    transition: all 0.2s ease-in-out;
+    background-color: transparent;
+    border-radius: 4px;
+    border: solid 1px var(--primary-text-color);
+    color: var(--primary-text-color);
+    display: block;
+    outline: 0;
+    padding: 0.75rem 1rem;
+    width: 100%;
+    font-size: 1rem;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    background: rgba(255, 255, 255, 0.075);
+    border-color: var(--primary-text-color);
+    box-shadow: 0 0 0 1px var(--primary-text-color);
+}
+ul.actions {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+}
+ul.actions li {
+    padding-right: 1rem;
+}
+input[type="submit"],
+input[type="reset"] {
+    background-color: var(--primary-text-color);
+    color: #1b1f22;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: var(--body-font);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    border-radius: 4px;
+}
+input[type="submit"]:hover {
+    background-color: var(--secondary-text-color);
+}
+input[type="reset"] {
+    background-color: transparent;
+    color: var(--primary-text-color);
+    border: 1px solid var(--primary-text-color);
+}
+input[type="reset"]:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/*----------------------------------------------*/
+/* FOOTER                                       */
+/*----------------------------------------------*/
+.footer_main {
+    text-align: center;
+    padding: 20px 0 40px 0;
+}
+#copyright {
+	padding-top: 20px;
+    color: var(--primary-text-color);
+    font-family: var(--body-font);
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+}
+.social_icon {
+    padding-bottom: 20px;
+}
+
+/*----------------------------------------------*/
+/* RESPONSIVE DESIGN (Media Queries)            */
+/*----------------------------------------------*/
+
+/*-- Tablets (up to 1023px) --*/
+@media only screen and (max-width: 1023px) {
+    html { font-size: 20px; }
+    .main_nav li { font-size: 28px; margin: 0 15px; }
+    .gallery-section { padding: 80px 4%; }
+    .gallery_column { flex: 50%; max-width: 50%; }
+}
+
+/*-- Mobile (up to 767px) --*/
+@media only screen and (max-width: 767px) {
+    html { font-size: 18px; }
+
+    /* MOBILE NAVIGATION */
+    .main_nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.95);
+        z-index: 999;
+        padding-top: 100px;
+    }
+    .main_nav.active {
+        display: block;
+    }
+    .main_nav li {
+        display: block;
+        text-align: center;
+        margin: 0;
+        padding: 20px 0;
+        font-size: 35px;
+    }
+
+    /* HAMBURGER ICON */
+    .mobile-nav-icon {
+        display: block;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        cursor: pointer;
+        z-index: 1000;
+    }
+    .mobile-nav-icon .icon-line {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: var(--primary-text-color);
+        margin: 6px 0;
+        transition: transform 0.3s;
+    }
+
+    /* GENERAL MOBILE STYLES */
+    .site_title {
+        font-size: 35px;
+        padding: 0 15px;
+    }
+    .site_tagline { font-size: 24px; }
+    .pages_title a { font-size: 45px; }
+    
+    .gallery-section { padding: 60px 2%; }
+    .gallery_column { flex: 100%; max-width: 100%; }
+
+    /* CONTACT FORM */
+    form .fields .field.half {
+        width: 100%;
+    }
+    /* ... other mobile styles ... */
+
+    /* Make signature smaller on mobile */
+    .site-signature {
+        max-width: 300px;
+    }
+}

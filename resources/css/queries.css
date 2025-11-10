@@ -1,0 +1,29 @@
+/* Responsive layout - makes a four column-layout */
+@media screen and (max-width: 2159px) {
+    .gallery_column,
+    .gallery_column_portraits,
+    .gallery_column_bodyscapes {
+        flex: 25%;
+        max-width: 25%;
+      }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1079px) {
+    .gallery_column,
+    .gallery_column_portraits,
+    .gallery_column_bodyscapes {
+        flex: 50%;
+        max-width: 50%;
+      }
+}
+
+/* Responsive layout - makes the one column stack on top of each other instead of next to each other */
+@media screen and (max-width: 767px) {
+    .gallery_column,
+    .gallery_column_portraits,
+    .gallery_column_bodyscapes {
+        flex: 100%;
+        max-width: 100%;
+      }
+}
