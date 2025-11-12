@@ -154,6 +154,7 @@ main {
 	color: var(--secondary-text-color);
     font-size: 30px;
     letter-spacing: 2.5px;
+	text-align: center;
 }
 
 
