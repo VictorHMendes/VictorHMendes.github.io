@@ -1,5 +1,5 @@
-﻿<!DOCTYPE html>
-<html lang="en"> <!-- Note the class is gone from here -->
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,14 +11,13 @@
 
         <title>Victor H Mendes - About/Contact</title>
     </head>
-    <body class="background_image_pages"> <!-- Note the class is now here -->
-    <body>
+    <body class="background_image_pages">
         <header>
             <nav>
                 <div class="row">
                     <ul class="main_nav">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="land.html">Landscapes</a></li>
+                        <li><a href="land.html">Landscapes/Fine Art</a></li>
                         <li><a href="portraits.html">Portraits</a></li>
                         <li><a href="bodyscapes.html">Bodyscapes</a></li>
                         <li><a href="contact.html" class="active_link">About/Contact</a></li>
@@ -46,27 +45,30 @@
 
                 <div class="contact-form-container">
                     <h2 class="major">Contact</h2>
-                    <!-- CHANGE 1: Update the form's action and method -->
-                    <form action="https://formspree.io/f/xldqzkyd" method="POST">
+                    <form action="https://formspree.io/f/YOUR_UNIQUE_CODE" method="POST">
                         <div class="fields">
                             <div class="field half">
                                 <label for="name">Name</label>
-                                <input type="text" name="name" id="name" required> <!-- Added 'required' -->
+                                <input type="text" name="name" id="name" required>
                             </div>
                             <div class="field half">
                                 <label for="email">Email</label>
-                                <!-- The 'name' attribute for email MUST be "email" for Formspree's reply feature -->
-                                <input type="email" name="email" id="email" required> <!-- Added 'required' -->
+                                <input type="email" name="email" id="email" required>
                             </div>
                             <div class="field">
                                 <label for="message">Message</label>
-                                <textarea name="message" id="message" rows="4" required></textarea> <!-- Added 'required' -->
+                                <textarea name="message" id="message" rows="4" required></textarea>
+                            </div>
+                            <!-- Marketing Opt-in Checkbox -->
+                            <div class="field">
+                                <input type="checkbox" name="subscribe" id="subscribe" value="yes">
+                                <label for="subscribe" class="subscribe-label">
+                                    Yes, I would like to receive news, updates, and special offers from Victor H Mendes.
+                                </label>
                             </div>
                         </div>
 
-                        <!-- CHANGE 2: Add this hidden field to redirect to your thank you page -->
-                        <!-- Make sure to replace the value with your actual website domain! -->
-                        <input type="hidden" name="_next" value="http://www.victorhmendes.com/thank_you.html">
+                        <input type="hidden" name="_next" value="http://www.victorhmendes.com/thank-you.html">
 
                         <ul class="actions">
                             <li><input type="submit" value="Send Message" /></li>
@@ -78,8 +80,11 @@
         </main>
             
         <footer class="footer_main">
+            <div class="signature-img">
+                <img src="resources/images/signature.png" alt="Victor H Mendes Signature">
+            </div>
             <div class="social_icon">
-                <a href="http://instagram.com/victorhmendesphoto/" target="_blank" rel="noopener noreferrer">
+                <a href="http://instagram.com/victorhmendeskauai/" target="_blank" rel="noopener noreferrer">
                     <img src="vendors/icons_social/ig_icon.png" alt="Instagram" width="45" height="45">
                 </a>
             </div>
@@ -90,7 +95,4 @@
 
         <script src="resources/js/main.js"></script>
     </body>
-
 </html>
-
-
