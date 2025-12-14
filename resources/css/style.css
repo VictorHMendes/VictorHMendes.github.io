@@ -415,7 +415,6 @@ input[type="reset"]:hover {
     color: var(--secondary-text-color);
 	font-family: var(--body-font);
 	font-weight: normal;    /* Overrides bold from general label style */
-    letter-spacing: initial; /* Overrides from general label style */
 }
 
 /* This targets the checkbox now correctly nested inside the label */
