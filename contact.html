@@ -39,28 +39,35 @@
                     <img src="resources/images/gallery_cont/1.jpg" alt="Victor H Mendes">
                 </div>
                 <div class="about_text">
-                    <p>My name is Victor Mendes, my work is a reflection of what I love, travel photography, landscape, bodyscapes and astrophotography. Photography helps me find my path, discover myself and share my journey.</p>
-                    <p>My objective is to create content, whether you're just looking for a beautiful photo or you need to commission a project to fit your specific needs. I'm available for hire and I would love to hear about you and your project.</p>
+                    <p>My name is Victor Mendes and I created Astrolabe Photography. My work is a reflection of what I love, travel photography, landscape, fine art, bodyscapes and astrophotography. The astrolabe was used as a tool to calculate the position of celestial bodies and for navigators to find their way. Like the astrolabe, photography helps me find my path, discover myself and share my journey.</p>
+                    <p>Astrolabe Photography's objective is to create content, whether you're just looking for a beautiful photo or you need to commission a project to fit your specific needs. I'm available for hire and I would love to hear about you and your project.</p>
                     <p>All the best,<br>Victor H Mendes</p>
                 </div>
 
                 <div class="contact-form-container">
                     <h2 class="major">Contact</h2>
-                    <form method="post" action="#">
+                    <!-- CHANGE 1: Update the form's action and method -->
+                    <form action="https://formspree.io/f/xldqzkyd" method="POST">
                         <div class="fields">
                             <div class="field half">
                                 <label for="name">Name</label>
-                                <input type="text" name="name" id="name" />
+                                <input type="text" name="name" id="name" required> <!-- Added 'required' -->
                             </div>
                             <div class="field half">
                                 <label for="email">Email</label>
-                                <input type="email" name="email" id="email" />
+                                <!-- The 'name' attribute for email MUST be "email" for Formspree's reply feature -->
+                                <input type="email" name="email" id="email" required> <!-- Added 'required' -->
                             </div>
                             <div class="field">
                                 <label for="message">Message</label>
-                                <textarea name="message" id="message" rows="4"></textarea>
+                                <textarea name="message" id="message" rows="4" required></textarea> <!-- Added 'required' -->
                             </div>
                         </div>
+
+                        <!-- CHANGE 2: Add this hidden field to redirect to your thank you page -->
+                        <!-- Make sure to replace the value with your actual website domain! -->
+                        <input type="hidden" name="_next" value="http://www.victorhmendes.com/thank_you.html">
+
                         <ul class="actions">
                             <li><input type="submit" value="Send Message" /></li>
                             <li><input type="reset" value="Reset" /></li>
@@ -85,4 +92,5 @@
     </body>
 
 </html>
+
 
