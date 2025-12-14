@@ -404,3 +404,17 @@ input[type="reset"]:hover {
         max-width: 300px;
     }
 }
+/*----------------------------------------------*/
+/* SUBSCRIBE CHECKBOX STYLES                    */
+/*----------------------------------------------*/
+.subscribe-label {
+    display: flex; /* Aligns checkbox and text */
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--secondary-text-color);
+}
+
+.subscribe-label input[type="checkbox"] {
+    margin-right: 10px; /* Space between checkbox and text */
+}
