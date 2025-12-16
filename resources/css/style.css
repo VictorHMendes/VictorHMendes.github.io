@@ -231,24 +231,31 @@ main {
     margin-bottom: 0.8em;
     color: var(--primary-text-color); /* Makes the label text white like the paragraph */
 }
-
-/* Special layout for the subscribe checkbox field */
+/*----------------------------------------------*/
+/* SUBSCRIBE CHECKBOX
+/* Step 1: Make the container a positioning anchor. It already has the correct
+   left/right padding from the .field class, so it's already aligned. */
 .subscribe-field {
-    position: relative; /* Needed for positioning the checkbox */
-    /*padding-left: 35px; /* Creates space on the left for the checkbox */
+    position: relative;
 }
 
+/* Step 2: Position the checkbox. We lift it up and place it exactly 1rem
+   from the left, which perfectly matches the padding of the fields above it. */
 .subscribe-field input[type="checkbox"] {
-    position: absolute; /* Takes the checkbox out of the normal document flow */
-    top: 6px;           /* Aligns it vertically with the first line of text. Adjust if needed. */
-    left: 1rem;            /* Positions it in the space we created with padding */
-    width: 15px;        /* Sets a clear size */
-    height: 15px;
+    position: absolute;
+    left: 1rem;  /* This aligns it with the other inputs */
+    top: 6px;    /* Fine-tunes vertical alignment */
+    width: 20px;
+    height: 20px;
 }
 
+/* Step 3: Indent the TEXT LABEL to make room for the floating checkbox.
+   The padding value should be the width of the checkbox (20px) + the gap you want (15px). */
 .subscribe-field .form-label {
-    margin-bottom: 0; /* Removes extra space below the checkbox text */
-    cursor: pointer;  /* Makes it clear the text is clickable */
+    display: block;    /* Ensures it takes up the full width */
+    padding-left: 35px;/* Pushes the text to the right of the checkbox */
+    margin-bottom: 0;
+    cursor: pointer;
 }
 .contact-form-container .major {
     font-size: 20px;
