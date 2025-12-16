@@ -222,6 +222,34 @@ main {
 .about_text p {
     margin-bottom: 1.2em;
 }
+/* New style for form labels to match the about_text */
+.form-label {
+    display: block;
+    font-family: var(--body-font);
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 0.8em;
+    color: var(--primary-text-color); /* Makes the label text white like the paragraph */
+}
+
+/* Special layout for the subscribe checkbox field */
+.subscribe-field {
+    position: relative; /* Needed for positioning the checkbox */
+    padding-left: 35px; /* Creates space on the left for the checkbox */
+}
+
+.subscribe-field input[type="checkbox"] {
+    position: absolute; /* Takes the checkbox out of the normal document flow */
+    top: 6px;           /* Aligns it vertically with the first line of text. Adjust if needed. */
+    left: 0;            /* Positions it in the space we created with padding */
+    width: 20px;        /* Sets a clear size */
+    height: 20px;
+}
+
+.subscribe-field .form-label {
+    margin-bottom: 0; /* Removes extra space below the checkbox text */
+    cursor: pointer;  /* Makes it clear the text is clickable */
+}
 .contact-form-container .major {
     font-size: 26px;
     color: var(--primary-text-color);
@@ -242,14 +270,7 @@ form .fields .field {
 form .fields .field.half {
     width: 50%;
 }
-label {
-    font-family: var(--body-font);
-    display: block;
-    font-size: 0.8rem;
-    font-weight: 300;
-    letter-spacing: 0.2rem;
-    margin: 0 0 0.8rem 0;
-}
+
 input[type="text"],
 input[type="email"],
 textarea {
@@ -403,18 +424,4 @@ input[type="reset"]:hover {
     .site-signature {
         max-width: 300px;
     }
-}
-/*----------------------------------------------*/
-/* SUBSCRIBE CHECKBOX STYLES                    */
-/*----------------------------------------------*/
-.subscribe-label {
-    display: flex; /* Aligns checkbox and text */
-    align-items: center;
-    cursor: pointer;
-    font-size: 0.9rem;
-    color: var(--secondary-text-color);
-}
-
-.subscribe-label input[type="checkbox"] {
-    margin-right: 10px; /* Space between checkbox and text */
 }
