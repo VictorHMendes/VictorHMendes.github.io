@@ -235,15 +235,15 @@ main {
 /* Special layout for the subscribe checkbox field */
 .subscribe-field {
     position: relative; /* Needed for positioning the checkbox */
-    padding-left: 35px; /* Creates space on the left for the checkbox */
+    /*padding-left: 35px; /* Creates space on the left for the checkbox */
 }
 
 .subscribe-field input[type="checkbox"] {
     position: absolute; /* Takes the checkbox out of the normal document flow */
     top: 6px;           /* Aligns it vertically with the first line of text. Adjust if needed. */
     left: 0;            /* Positions it in the space we created with padding */
-    width: 20px;        /* Sets a clear size */
-    height: 20px;
+    width: 15px;        /* Sets a clear size */
+    height: 15px;
 }
 
 .subscribe-field .form-label {
