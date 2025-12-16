@@ -48,21 +48,22 @@
                     <form action="https://formspree.io/f/YOUR_UNIQUE_CODE" method="POST">
                         <div class="fields">
                             <div class="field half">
-                                <label for="name">Name</label>
+                                <label for="name" class="form-label">Name</label>
                                 <input type="text" name="name" id="name" required>
                             </div>
                             <div class="field half">
-                                <label for="email">Email</label>
+                                <label for="email" class="form-label">Email</label>
                                 <input type="email" name="email" id="email" required>
                             </div>
                             <div class="field">
-                                <label for="message">Message</label>
+                                <label for="message" class="form-label">Message</label>
                                 <textarea name="message" id="message" rows="4" required></textarea>
                             </div>
-                            <!-- Marketing Opt-in Checkbox -->
-                            <div class="field">
-                                <label for="subscribe" class="subscribe-label">
-                                    <input type="checkbox" name="subscribe" id="subscribe" value="no"> Yes, I would like to receive news, updates, and special offers from Victor H Mendes.
+                            <!-- This structure is slightly different to allow for the hanging indent -->
+                            <div class="field subscribe-field">
+                                <input type="checkbox" name="subscribe" id="subscribe" value="yes">
+                                <label for="subscribe" class="form-label">
+                                    Yes, I would like to receive news, updates, and special offers from Victor H Mendes.
                                 </label>
                             </div>
                         </div>
@@ -92,6 +93,7 @@
         <script src="resources/js/main.js"></script>
     </body>
 </html>
+
 
 
 
