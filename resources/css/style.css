@@ -245,8 +245,8 @@ main {
     position: absolute;
     left: 1rem;  /* This aligns it with the other inputs */
     top: 6px;    /* Fine-tunes vertical alignment */
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
 }
 
 /* Step 3: Indent the TEXT LABEL to make room for the floating checkbox.
