@@ -251,7 +251,7 @@ main {
     cursor: pointer;  /* Makes it clear the text is clickable */
 }
 .contact-form-container .major {
-    font-size: 26px;
+    font-size: 20px;
     color: var(--primary-text-color);
     text-decoration: underline;
     margin-bottom: 30px;
