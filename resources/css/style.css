@@ -162,7 +162,7 @@ main {
 /* GALLERY                                      */
 /*----------------------------------------------*/
 .gallery-section {
-    padding: 40px 10%; /* Use percentages for flexible padding */
+    padding: 10px 10%; /* Use percentages for flexible padding */
     padding-bottom: 150px;
 }
 #gallery_tag {
