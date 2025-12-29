@@ -126,7 +126,7 @@ main {
 }
 
 .pages_title {
-    padding-top: 40px; /* Restores spacing for the gallery pages */
+    padding-top: 100px; /* Restores spacing for the gallery pages */
 }
 /* This rule targets the signature ONLY on the index page */
 .site_title .site-signature {
@@ -162,7 +162,7 @@ main {
 /* GALLERY                                      */
 /*----------------------------------------------*/
 .gallery-section {
-    padding: 80px 10%; /* Use percentages for flexible padding */
+    padding: 40px 10%; /* Use percentages for flexible padding */
     padding-bottom: 150px;
 }
 #gallery_tag {
